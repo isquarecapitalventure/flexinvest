@@ -1,0 +1,159 @@
+{
+  "identity": {
+    "name": "FlexInvest",
+    "persona": "E1 - The Anti-AI Designer",
+    "tone": "Trustworthy, Wealth-Oriented, Professional, High-Tech",
+    "target_audience": "Nigerian Investors",
+    "core_values": ["Security", "Growth", "Transparency"]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Syne, sans-serif",
+      "body": "Plus Jakarta Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "google_fonts_import": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap",
+    "usage": {
+      "h1": "font-heading font-bold text-4xl md:text-6xl tracking-tight leading-none",
+      "h2": "font-heading font-semibold text-3xl md:text-4xl tracking-tight",
+      "h3": "font-heading font-medium text-2xl tracking-normal",
+      "body": "font-body text-base leading-relaxed text-slate-300",
+      "label": "font-mono text-xs uppercase tracking-wider text-slate-500",
+      "price": "font-heading font-bold text-emerald-400"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#0f172a",
+      "foreground": "#f8fafc",
+      "primary": "#10b981",
+      "primary_foreground": "#022c22",
+      "secondary": "#3b82f6",
+      "secondary_foreground": "#eff6ff",
+      "accent": "#facc15",
+      "accent_foreground": "#422006",
+      "destructive": "#ef4444",
+      "muted": "#1e293b",
+      "muted_foreground": "#94a3b8",
+      "border": "#1e293b",
+      "input": "#1e293b",
+      "ring": "#10b981"
+    },
+    "semantic": {
+      "success": "text-emerald-500 bg-emerald-500/10 border-emerald-500/20",
+      "warning": "text-yellow-500 bg-yellow-500/10 border-yellow-500/20",
+      "error": "text-red-500 bg-red-500/10 border-red-500/20",
+      "info": "text-blue-500 bg-blue-500/10 border-blue-500/20"
+    },
+    "gradients": {
+      "hero": "bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950",
+      "card_hover": "hover:bg-slate-800/50 transition-colors duration-300",
+      "text_gradient": "bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "default": "bg-slate-900/70 backdrop-blur-xl border border-white/5 shadow-2xl",
+      "heavy": "bg-black/40 backdrop-blur-2xl border border-white/10",
+      "light": "bg-white/5 backdrop-blur-md border border-white/5"
+    },
+    "borders": {
+      "subtle": "border border-slate-800",
+      "highlight": "border border-emerald-500/30"
+    },
+    "shadows": {
+      "glow": "shadow-[0_0_20px_rgba(16,185,129,0.15)]",
+      "card": "shadow-xl shadow-black/20"
+    },
+    "radius": {
+      "default": "rounded-xl",
+      "button": "rounded-lg",
+      "card": "rounded-2xl"
+    }
+  },
+  "layout_strategies": {
+    "marketing": {
+      "grid": "grid grid-cols-1 md:grid-cols-12 gap-8",
+      "container": "max-w-7xl mx-auto px-6 md:px-12",
+      "section_spacing": "py-24 md:py-32"
+    },
+    "dashboard": {
+      "structure": "flex h-screen overflow-hidden bg-slate-950",
+      "sidebar": "w-64 hidden md:flex flex-col border-r border-slate-800 bg-slate-900/50 backdrop-blur-xl",
+      "main_content": "flex-1 overflow-y-auto p-6 md:p-10",
+      "grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all duration-300",
+      "secondary": "bg-slate-800 hover:bg-slate-700 text-white border border-slate-700",
+      "ghost": "hover:bg-slate-800/50 text-slate-400 hover:text-white"
+    },
+    "cards": {
+      "base": "bg-slate-900/60 backdrop-blur-md border border-slate-800 p-6 rounded-2xl hover:border-slate-700 transition-all duration-300 group relative overflow-hidden",
+      "highlight": "absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+    },
+    "inputs": {
+      "base": "bg-slate-950/50 border-slate-800 focus:border-emerald-500 focus:ring-emerald-500/20 text-white placeholder:text-slate-600 h-12 rounded-lg"
+    },
+    "badges": {
+      "pending": "bg-yellow-500/10 text-yellow-500 border-yellow-500/20 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wide",
+      "approved": "bg-emerald-500/10 text-emerald-500 border-emerald-500/20 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wide",
+      "rejected": "bg-red-500/10 text-red-500 border-red-500/20 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wide"
+    }
+  },
+  "image_assets": {
+    "hero_section": {
+      "url": "https://images.pexels.com/photos/7552373/pexels-photo-7552373.jpeg",
+      "alt": "Confident African professional looking at future growth",
+      "usage": "Hero background or split layout image. Apply a dark gradient overlay (bg-slate-900/80) to ensure text readability."
+    },
+    "features_abstract": {
+      "url": "https://images.pexels.com/photos/4754883/pexels-photo-4754883.jpeg",
+      "alt": "Abstract geometric emerald shapes",
+      "usage": "Background for 'How it works' or 'Investment Packages' section. Use with low opacity or mix-blend-mode."
+    },
+    "team_culture": {
+      "url": "https://images.pexels.com/photos/7552374/pexels-photo-7552374.jpeg",
+      "alt": "Diverse team collaborating",
+      "usage": "About Us or Support section."
+    },
+    "trust_abstract": {
+      "url": "https://images.pexels.com/photos/12608891/pexels-photo-12608891.jpeg",
+      "alt": "Secure digital abstract",
+      "usage": "Security/Wallet features background."
+    }
+  },
+  "motion_guidelines": {
+    "page_transition": {
+      "initial": { "opacity": 0, "y": 20 },
+      "animate": { "opacity": 1, "y": 0 },
+      "exit": { "opacity": 0, "y": -20 },
+      "transition": { "duration": 0.4, "ease": "easeOut" }
+    },
+    "hover_lift": "hover:-translate-y-1 transition-transform duration-300 ease-out",
+    "list_stagger": 0.1
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: All frontend files are .jsx (React JS), NOT .tsx. Do not use TypeScript syntax.",
+    "CRITICAL: Use the 'Syne' font for all headings to give a unique fintech identity. Import it in index.css via @import or link tag.",
+    "CRITICAL: Ensure all monetary values are formatted with the Naira symbol (₦). Example: '₦50,000.00'.",
+    "CRITICAL: For the 'Investment Packages', use a Card layout that highlights the 'Daily Profit' and 'Total Return' clearly.",
+    "CRITICAL: The 'Proof of Payment' upload must use a drag-and-drop zone style (dashed border) to feel modern.",
+    "CRITICAL: Admin Dashboard must be dense. Use tables from Shadcn, but style the headers with 'bg-slate-900' and 'text-slate-400'.",
+    "CRITICAL: Do not use default scrollbars. Hide them or style them thin and dark.",
+    "CRITICAL: Use 'lucide-react' for icons. Preferred icons: 'Wallet', 'TrendingUp', 'ShieldCheck', 'Banknote', 'History', 'Users'.",
+    "CRITICAL: Always add 'data-testid' to interactive elements."
+  ],
+  "universal_guidelines": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: 'transition: all'. This results in breaking transforms.",
+    "You MUST NOT center align the app container.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations.",
+    "NEVER use AI assistant Emoji characters for icons."
+  ]
+}
