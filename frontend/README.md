@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Environment
+
+```sh
+    CI=false
+    REACT_APP_BACKEND_URL=localhost:8000
+    WDS_SOCKET_PORT=443
+    ENABLE_HEALTH_CHECK=false
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
