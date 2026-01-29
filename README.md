@@ -6,6 +6,7 @@ cd path/to/your/project-folder
 python3 -m venv venv
 # or on Windows: python -m venv venv
 source venv/bin/activate
+
 # for macox/linux
 .\venv\Scripts\activate
 
