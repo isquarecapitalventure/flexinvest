@@ -52,14 +52,14 @@ COMPANY_BANK = {
 
 # Investment Packages (Static)
 INVESTMENT_PACKAGES = [
-    {"id": "pkg_1", "capital": 10000, "daily_profit": 800, "duration": 42, "total_return": 33600},
-    {"id": "pkg_2", "capital": 20000, "daily_profit": 1400, "duration": 42, "total_return": 58800},
-    {"id": "pkg_3", "capital": 40000, "daily_profit": 1900, "duration": 42, "total_return": 79800},
-    {"id": "pkg_4", "capital": 60000, "daily_profit": 2300, "duration": 42, "total_return": 96600},
-    {"id": "pkg_5", "capital": 100000, "daily_profit": 4500, "duration": 42, "total_return": 189000},
+    {"id": "pkg_1", "capital": 10000, "daily_profit": 600, "duration": 42, "total_return": 25200},
+    {"id": "pkg_2", "capital": 20000, "daily_profit": 1000, "duration": 42, "total_return": 42000},
+    {"id": "pkg_3", "capital": 40000, "daily_profit": 1700, "duration": 42, "total_return": 71400},
+    {"id": "pkg_4", "capital": 60000, "daily_profit": 2600, "duration": 42, "total_return": 109200},
+    {"id": "pkg_5", "capital": 100000, "daily_profit": 4200, "duration": 42, "total_return": 176400},
     {"id": "pkg_6", "capital": 150000, "daily_profit": 6000, "duration": 42, "total_return": 252000},
-    {"id": "pkg_7", "capital": 200000, "daily_profit": 8000, "duration": 42, "total_return": 336000},
-    {"id": "pkg_8", "capital": 300000, "daily_profit": 11000, "duration": 42, "total_return": 462000},
+    {"id": "pkg_7", "capital": 200000, "daily_profit": 7200, "duration": 42, "total_return": 302400},
+    {"id": "pkg_8", "capital": 300000, "daily_profit": 10000, "duration": 42, "total_return": 420000},
 ]
 
 # Support Links (Static)

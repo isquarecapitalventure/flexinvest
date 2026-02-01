@@ -42,45 +42,45 @@ const INVESTMENT_PACKAGES = [
   { 
     id: "pkg_1", 
     capital: 10000, 
-    daily_profit: 800, 
+    daily_profit: 600, 
     duration: 42, 
-    total_return: 33600,
+    total_return: 25200,
     bestFor: "Beginners",
     features: ["Daily Withdrawals", "Basic Support", "Market Updates"]
   },
   { 
     id: "pkg_2", 
     capital: 20000, 
-    daily_profit: 1400, 
+    daily_profit: 1000, 
     duration: 42, 
-    total_return: 58800,
+    total_return: 42000,
     bestFor: "Starters",
     features: ["Priority Support", "Weekly Reports", "Risk Management"]
   },
   { 
     id: "pkg_3", 
     capital: 40000, 
-    daily_profit: 1900, 
+    daily_profit: 1700, 
     duration: 42, 
-    total_return: 79800,
+    total_return: 71400,
     bestFor: "Growing Investors",
     features: ["Advanced Analytics", "Dedicated Account Manager", "Insurance Coverage"]
   },
   { 
     id: "pkg_4", 
     capital: 60000, 
-    daily_profit: 2300, 
+    daily_profit: 2600, 
     duration: 42, 
-    total_return: 96600,
+    total_return: 109200,
     bestFor: "Serious Traders",
     features: ["VIP Signals", "Tax Optimization", "Portfolio Review"]
   },
   { 
     id: "pkg_5", 
     capital: 100000, 
-    daily_profit: 4500, 
+    daily_profit: 4200, 
     duration: 42, 
-    total_return: 189000,
+    total_return: 176400,
     bestFor: "Premium Investors",
     features: ["Personal Advisor", "Exclusive Webinars", "Advanced Tools", "Priority Processing"]
   },
@@ -96,18 +96,18 @@ const INVESTMENT_PACKAGES = [
   { 
     id: "pkg_7", 
     capital: 200000, 
-    daily_profit: 8000, 
+    daily_profit: 7200, 
     duration: 42, 
-    total_return: 336000,
+    total_return: 302400,
     bestFor: "Institutional",
     features: ["White Label", "Full Automation", "Risk Hedging", "24/7 Monitoring"]
   },
   { 
     id: "pkg_8", 
     capital: 300000, 
-    daily_profit: 11000, 
+    daily_profit: 10000, 
     duration: 42, 
-    total_return: 462000,
+    total_return: 420000,
     bestFor: "Ultra High Net Worth",
     features: ["Family Office Services", "Estate Planning", "Global Access", "Private Events"]
   },
