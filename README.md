@@ -106,8 +106,21 @@ source venv/bin/activate
 pip install -r requirements.txt if using one
 systemctl restart fastapi | kill -HUP $(pgrep gunicorn) | Status
 
-
 pip install uvicorn
 gunicorn -w 4 -k uvicorn.workers.UvicornWorker server:app --bind 0.0.0.0:8000
 uvicorn server:app --reload
 
+---
+
+#!/bin/bash
+git pull origin main
+source venv/bin/activate
+pip install -r requirements.txt
+
+# Kill the old gunicorn process
+
+pkill -f gunicorn
+
+# Start it back up in the background (using nohup so it stays alive)
+
+nohup gunicorn -w 4 -k uvicorn.workers.UvicornWorker server:app --bind 0.0.0.0:8091 > output.log 2>&1 &
