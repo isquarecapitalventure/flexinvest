@@ -2441,7 +2441,7 @@ origins = [origin.strip() for origin in cors_origins_str.split(',')]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=origins + "https://app.isquaredcapital.com.ng,https://isquaredcapital.com.ng".split(","),
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
     allow_headers=[
