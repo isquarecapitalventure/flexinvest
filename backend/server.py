@@ -2436,12 +2436,39 @@ app.include_router(api_router)
 # )
 
 # CORS Configuration
+# Read origins from env and normalize to include scheme if missing
 cors_origins_str = os.environ.get('CORS_ORIGINS', 'http://localhost:3000,http://localhost:5173')
-origins = [origin.strip() for origin in cors_origins_str.split(',')]
+raw_origins = [o.strip() for o in cors_origins_str.split(',') if o.strip()]
+
+def _normalize_origin(o: str) -> str:
+    if o.startswith('http://') or o.startswith('https://'):
+        return o
+    return f'http://{o}'
+
+origins = [_normalize_origin(o) for o in raw_origins]
+# Ensure known production hosts are included
+origins += [
+    'https://app.isquaredcapital.com.ng',
+    'https://isquaredcapital.com.ng'
+]
+
+logger.info(f"Configured CORS origins: {origins}")
+
+# Debug middleware to log incoming Origin header and response CORS header
+@app.middleware("http")
+async def _log_request_origin(request, call_next):
+    origin = request.headers.get('origin')
+    if origin:
+        logger.info(f"Incoming request Origin: {origin}")
+    response = await call_next(request)
+    acao = response.headers.get('access-control-allow-origin')
+    if acao:
+        logger.info(f"Response Access-Control-Allow-Origin: {acao}")
+    return response
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins + "https://app.isquaredcapital.com.ng,https://isquaredcapital.com.ng".split(","),
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
     allow_headers=[
