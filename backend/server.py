@@ -2407,14 +2407,37 @@ app = FastAPI(title="FlexInvest API", lifespan=lifespan)
 app.include_router(api_router)
 
 # CORS Configuration
-origins = [
-    "http://localhost:3000",
-    "http://localhost:5173",
-    "http://127.0.0.1:3000",
-    "http://127.0.0.1:5173",
-    "http://localhost:8080",
-    "http://127.0.0.1:8080",
-]
+# origins = [
+#     "http://localhost:3000",
+#     "http://localhost:5173",
+#     "http://127.0.0.1:3000",
+#     "http://127.0.0.1:5173",
+#     "http://localhost:8080",
+#     "http://127.0.0.1:8080",
+# ]
+
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=origins,
+#     allow_credentials=True,
+#     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+#     allow_headers=[
+#         "*",
+#         "Authorization",
+#         "Content-Type",
+#         "Accept",
+#         "Origin",
+#         "X-Requested-With",
+#         "Access-Control-Allow-Headers",
+#         "Access-Control-Allow-Origin"
+#     ],
+#     expose_headers=["*"],
+#     max_age=3600,
+# )
+
+# CORS Configuration
+cors_origins_str = os.environ.get('CORS_ORIGINS', 'http://localhost:3000,http://localhost:5173')
+origins = [origin.strip() for origin in cors_origins_str.split(',')]
 
 app.add_middleware(
     CORSMiddleware,
@@ -2434,6 +2457,7 @@ app.add_middleware(
     expose_headers=["*"],
     max_age=3600,
 )
+
 
 # ============= MAIN ENTRY POINT =============
 
