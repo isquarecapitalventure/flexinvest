@@ -94,3 +94,20 @@ pip install uvicorn
 gunicorn -w 4 -k uvicorn.workers.UvicornWorker server:app --bind 0.0.0.0:8091
 
 ```
+
+Updating Your App (Deploying New Versions)
+
+When you change your code on GitHub, deploy updates like this:
+
+ssh root@YOUR_SERVER_IP
+cd /opt/fastapiapp
+git pull
+source venv/bin/activate
+pip install -r requirements.txt if using one
+systemctl restart fastapi | kill -HUP $(pgrep gunicorn) | Status
+
+
+pip install uvicorn
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker server:app --bind 0.0.0.0:8000
+uvicorn server:app --reload
+
