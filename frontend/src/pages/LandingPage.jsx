@@ -154,7 +154,7 @@ const SOCIAL_MEDIA = [
     name: 'Email', 
     icon: Mail, 
     color: '#EA4335',
-    url: 'mailto:support@squarecapital.ng',
+    url: 'mailto:isquarecapitalventure@gmail.com',
     description: 'Send us an email'
   },
 ];
