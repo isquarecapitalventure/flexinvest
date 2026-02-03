@@ -86,3 +86,11 @@ frontend/node_modules/.cache/default-development/0.pack
 **.env
 frontend/.env
 backend/.env
+
+# Sqlite db
+*.sqlite3
+*.db
+backend/*.sqlite3
+backend/*.db
+backend/flexinvest.db
+/backend/flexinvest.db
