@@ -4,7 +4,8 @@ import axios from 'axios';
 const AuthContext = createContext(null);
 
 // FIX: Add protocol to API_URL
-const API_URL = `http://localhost:8000/api`;
+// const API_URL = `http://localhost:8000/api`;
+const API_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000/api";
 
 // Configure axios defaults
 axios.defaults.headers.common['Content-Type'] = 'application/json';

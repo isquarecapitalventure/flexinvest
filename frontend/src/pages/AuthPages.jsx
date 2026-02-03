@@ -32,7 +32,8 @@ function BrandingInfo() {
 }
 
 // Update BASE_API_URL to target backend on localhost:8000
-const BASE_API_URL = 'http://localhost:8000';
+// const BASE_API_URL = 'http://localhost:8000';
+const BASE_API_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000/api";
 
 export const LoginPage = () => {
   const navigate = useNavigate();

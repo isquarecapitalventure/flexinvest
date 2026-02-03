@@ -10,7 +10,8 @@ import { Textarea } from '../components/ui/textarea';
 import { MessageSquare, Send, Phone, Mail, Loader2, ExternalLink } from 'lucide-react';
 import { toast } from 'sonner';
 
-const API_URL = `http://localhost:8000/api`;
+// const API_URL = `http://localhost:8000/api`;
+const API_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000/api";
 
 const StatusBadge = ({ status }) => {
   const styles = {

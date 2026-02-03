@@ -58,3 +58,39 @@ python server.py
     You have a domain pointing to the VPS IP (optional but recommended)
 
 For more details [visit guide](https://dev.to/lasisi_ibrahimpelumi_dc0/running-fastapi-in-production-on-a-vps-step-by-step-5e4d)
+
+```sh
+source venv/bin/activate
+
+pip install --upgrade pip
+
+pip install fastapi uvicorn[standard] gunicorn
+
+gunicorn -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8091 --workers 3
+
+cd opt/fastapiapp
+
+gunicorn -k uvicorn.workers.UvicornWorker server:app --bind 0.0.0.0:8091 --workers 3
+
+gunicorn -w 4 -b 0.0.0.0:8000 --timeout 120 server:app
+
+pip install -r requirements.txt
+
+pip install fastapi uvicorn[standard]
+
+
+source venv/bin/activate
+pip install "fastapi[standard]"
+ pip install fastapi uvicorn
+pip show fastapi
+uvicorn server:app --reload
+python server.py
+uvicorn app.main:app --reload
+python -m venv venv
+uvicorn server:app --reload
+python server.py
+gunicorn -w 4 -b 0.0.0.0:8091 --timeout 120 server:app
+pip install uvicorn
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker server:app --bind 0.0.0.0:8091
+
+```

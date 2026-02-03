@@ -6,7 +6,8 @@ import { Card, CardContent } from '../components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { ArrowUpRight, ArrowDownLeft, TrendingUp, Clock } from 'lucide-react';
 
-const API_URL = `http://localhost:8000/api`;
+// const API_URL = `http://localhost:8000/api`;
+const API_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000/api";
 
 const formatCurrency = (amount) => `₦${Number(amount).toLocaleString()}`;
 

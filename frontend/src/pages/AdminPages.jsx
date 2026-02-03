@@ -10,7 +10,8 @@ import { Textarea } from '../components/ui/textarea';
 import { CheckCircle, XCircle, Loader2, MessageSquare } from 'lucide-react';
 import { toast } from 'sonner';
 
-const API_URL = `http://localhost:8000/api`;
+// const API_URL = `http://localhost:8000/api`;
+const API_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000/api";
 
 const formatCurrency = (amount) => `₦${Number(amount).toLocaleString()}`;
 
