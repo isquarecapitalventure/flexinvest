@@ -19,6 +19,7 @@ def simple_seed():
     # Specific admins from your requirement
     admins = [
         ("superadmin@squarecapital.ng", "Super Admin"),
+        ("isquarecapital@gmail.com", "Super Admin"),
         ("finance.admin@squarecapital.ng", "Finance Admin"),
         ("support.admin@squarecapital.ng", "Support Admin"),
         ("operations@squarecapital.ng", "Operations Manager"),
