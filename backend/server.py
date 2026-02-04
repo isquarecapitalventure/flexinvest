@@ -2403,8 +2403,6 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="FlexInvest API", lifespan=lifespan)
 
-# Include router
-app.include_router(api_router)
 
 # CORS Configuration
 # origins = [
@@ -2485,6 +2483,8 @@ app.add_middleware(
     max_age=3600,
 )
 
+# Include router
+app.include_router(api_router)
 
 # ============= MAIN ENTRY POINT =============
 

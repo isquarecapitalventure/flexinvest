@@ -124,3 +124,10 @@ pkill -f gunicorn
 # Start it back up in the background (using nohup so it stays alive)
 
 nohup gunicorn -w 4 -k uvicorn.workers.UvicornWorker server:app --bind 0.0.0.0:8091 > output.log 2>&1 &
+
+
+_____________________
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:8091 --timeout 120 server:app
+
+
+uvicorn server:app --host 0.0.0.0 --port 8000 --reload
