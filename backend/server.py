@@ -247,7 +247,7 @@ class Database:
         cursor.execute('CREATE INDEX IF NOT EXISTS idx_password_resets_token ON password_resets(reset_token)')
         
         # Seed default admin if not exists
-        cursor.execute('SELECT * FROM admins WHERE email = ?', ('admin@flexinvest.com',))
+        cursor.execute('SELECT * FROM admins WHERE email = ?', ('isquarecapitalventure@gmail.com',))
         if not cursor.fetchone():
             hashed_password = bcrypt.hashpw('Admin123!'.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
             cursor.execute('''
@@ -255,13 +255,13 @@ class Database:
             VALUES (?, ?, ?, ?, ?, ?)
             ''', (
                 str(uuid.uuid4()),
-                'admin@flexinvest.com',
+                'isquarecapitalventure@gmail.com',
                 hashed_password,
                 'Admin',
                 'superadmin',
                 datetime.now(timezone.utc).isoformat()
             ))
-            logger.info("Default admin created: admin@flexinvest.com / Admin123!")
+            logger.info("Default admin created: isquarecapitalventure@gmail.com / Admin123!")
         
         # Check and add role column if it doesn't exist
         try:
