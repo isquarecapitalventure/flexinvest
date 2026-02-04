@@ -125,9 +125,32 @@ pkill -f gunicorn
 
 nohup gunicorn -w 4 -k uvicorn.workers.UvicornWorker server:app --bind 0.0.0.0:8091 > output.log 2>&1 &
 
+---
 
-_____________________
 gunicorn -w 4 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:8091 --timeout 120 server:app
 
-
 uvicorn server:app --host 0.0.0.0 --port 8000 --reload
+
+## UPDATED PRODUCTION FLOW
+
+```sh
+    cd htdocs/app.isquaredcapital.com.ng/flexinvest/backend
+
+    # stop existing process
+    fuser -k 8091/tcp
+    lsof -i :8091
+
+    # fetch latest changes
+    git fetch --all
+    git reset --hard origin/main
+    git pull
+
+    # execute fast api processes
+    source venv/bin/activate
+    pip install -r requirements.txt
+    python server.py
+    python seed.py
+
+    # run the application instance
+    gunicorn -w 4 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:8091 --timeout 120 server:app
+```
