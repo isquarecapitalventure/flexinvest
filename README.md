@@ -136,8 +136,10 @@ uvicorn server:app --host 0.0.0.0 --port 8000 --reload
 ```sh
     cd htdocs/app.isquaredcapital.com.ng/flexinvest/backend
 
-    # stop existing process
+    # stop existing processes on the port
+    # 8091/tcp:            659538 659539 659540 659541 659542
     fuser -k 8091/tcp
+    # Killed  gunicorn -w 4 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:8091 --timeout 120 server:app
     lsof -i :8091
 
     # fetch latest changes
@@ -148,6 +150,7 @@ uvicorn server:app --host 0.0.0.0 --port 8000 --reload
     # execute fast api processes
     source venv/bin/activate
     pip install -r requirements.txt
+    pip install fastapi uvicorn
     python server.py
     python seed.py
 

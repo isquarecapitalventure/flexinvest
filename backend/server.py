@@ -610,6 +610,7 @@ async def send_email(to_email: str, subject: str, html_content: str):
             username=SMTP_EMAIL,
             password=SMTP_PASSWORD,
             start_tls=True
+            # start_tls=SMTP_PORT != 465
         )
         logger.info(f"Email sent to {to_email}")
         return True
