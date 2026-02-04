@@ -1,0 +1,31 @@
+
+### register user
+
+POST http://localhost:8000/api/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "email": "abdul.salam.amtech@gmail.com",
+    "full_name": "New User",
+    "phone": "08123456789",
+    "password": "12345678"
+}
+
+### resend otp
+
+POST http://localhost:8000/api/auth/resend-otp HTTP/1.1
+content-type: application/json
+
+{
+    "email": "abdulsalam.amtech@gmail.com"
+}
+
+### verify email
+
+POST http://localhost:8000/api/auth/verify-otp HTTP/1.1
+content-type: application/json
+
+{
+    "email": "abdulsalam.amtech@gmail.com",
+    "otp": "587082"
+}
