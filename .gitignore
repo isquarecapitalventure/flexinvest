@@ -94,3 +94,4 @@ backend/*.sqlite3
 backend/*.db
 backend/flexinvest.db
 /backend/flexinvest.db
+flexinvest.db
