@@ -64,9 +64,9 @@ INVESTMENT_PACKAGES = [
 
 # Support Links (Static)
 SUPPORT_LINKS = {
-    "whatsapp": "https://wa.me/2348012345678",
-    "telegram": "https://t.me/flexinvest_support",
-    "email": "support@flexinvest.com"
+    "whatsapp": "https://wa.me/2349017209246",
+    "telegram": "https://t.me/2349017209246",
+    "email": "isquarecapitalventure@gmail.com"
 }
 
 # Configure logging

@@ -119,14 +119,14 @@ const SOCIAL_MEDIA = [
     name: 'WhatsApp', 
     icon: MessageCircle, 
     color: '#25D366',
-    url: 'https://wa.me/2349012345678',
+    url: 'https://wa.me/2349017209246',
     description: 'Chat with our support team'
   },
   { 
     name: 'Telegram', 
     icon: MessageCircle, 
     color: '#0088CC',
-    url: 'https://t.me/flexinvestng',
+    url: 'https://t.me/2349017209246',
     description: 'Join our community channel'
   },
   { 
@@ -458,7 +458,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-emerald-400" />
                   <div>
-                    <div className="font-bold text-white">support@squarecapital.ng</div>
+                    <div className="font-bold text-white">-isquarecapitalventure@gmail.com</div>
                     <div className="text-slate-400">invest@squarecapital.ng</div>
                   </div>
                 </div>

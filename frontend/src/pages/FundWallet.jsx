@@ -37,12 +37,12 @@ const StatusBadge = ({ status }) => {
 };
 
 const STATIC_BANK = {
-  bank_name: "GT BANK",
-  account_number: "1100298838",
-  account_name: "Square Capital Ventures Nigeria Limited",
+  bank_name: "Moniepoint",
+  account_number: "8196010143",
+  account_name: "Ibrahim Abubakar",
 };
 
-const WHATSAPP_NUMBER = "08038624730";
+const WHATSAPP_NUMBER = "09017209246";
 const WHATSAPP_LINK = `https://wa.me/234${WHATSAPP_NUMBER.replace(/^0/, "")}?text=Hello%20I%20want%20to%20send%20deposit%20evidence%20for%20my%20Square%20Capital%20account`;
 
 export const FundWalletPage = () => {
